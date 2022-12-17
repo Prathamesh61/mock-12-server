@@ -13,9 +13,9 @@ JobRouter.get("/", async (req, res) => {
 });
 
 JobRouter.post("/create", async (req, res) => {
-    const { company, city, location, role, level, contract, position, lanugage } = req.body;
+    const { company, city, location, role, level, contract, position, language } = req.body;
     const newJob = new JobModel({
-        company, city, location, role, level, contract, position, lanugage
+        company, city, location, role, level, contract, position, language
     });
     try {
         await newJob.save();
